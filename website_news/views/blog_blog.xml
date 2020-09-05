@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Inherit Form View to Modify it -->
+        <record id="blog_blog_inherit_form" model="ir.ui.view">
+            <field name="name">blog.blog.inherit.form</field>
+            <field name="model">blog.blog</field>
+            <field name="inherit_id" ref="website_blog.view_blog_blog_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="before">
+                    <field name="cover_blog" widget='image' class="oe_avatar"
+                        options='{"zoom": true, "preview_image":"cover_blog"}'/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
